@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Event;
+use Liberu\Ecommerce\Returns\Actions\ApproveReturn;
 use Liberu\Ecommerce\Returns\Actions\ReceiveGoods;
 use Liberu\Ecommerce\Returns\Actions\TransitionReturn;
 use Liberu\Ecommerce\Returns\Data\LineReceipt;
