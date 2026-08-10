@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schemas.liberu.dev/module/v1.json",
+    "name": "ecommerce-returns",
+    "display_name": "Returns",
+    "description": "What came back after delivery, and what the merchant decided about it: a request that is authorised or refused, goods that arrive or never do, an inspection that says what is saleable, and a refund recorded as an amount and a reference rather than taken.",
+    "version": "0.1.0",
+    "category": "product",
+    "provider": "Liberu\\Ecommerce\\Returns\\ReturnsServiceProvider",
+    "requires": {
+        "php": "^8.5",
+        "laravel": "^13.0",
+        "packages": {
+            "liberusoftware/module-manager": "^1.4"
+        }
+    },
+    "capabilities": [
+        "ecommerce.returns"
+    ],
+    "default_enabled": false,
+    "features": [
+        "Return requests",
+        "Return authorisation numbers",
+        "Eligibility as an input, never a lookup",
+        "A five-clock state machine",
+        "Illegal transitions throw",
+        "Self-transitions refused",
+        "Append-only status history",
+        "Requested, approved and received kept as separate facts",
+        "Short receipts allowed, over-receipts refused",
+        "Unauthorised goods refused rather than adopted",
+        "Two exception classes for two opposite receipt failures",
+        "Inspection dispositions",
+        "Restock published, never written",
+        "Refunds as an amount and a reference",
+        "Integer minor units",
+        "Reasons as a closed set of slugs",
+        "Domain events",
+        "Read models",
+        "Return queries",
+        "Telemetry"
+    ]
+}

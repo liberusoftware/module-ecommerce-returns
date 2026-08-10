@@ -1,0 +1,42 @@
+{
+    "name": "liberusoftware/ecommerce-returns",
+    "description": "The return: a workflow with goods in it. A five-clock state machine that refuses an illegal move, requested and received kept as separate facts that are refused rather than clamped when they disagree, and a refund modelled as an amount and a reference because the money belongs to whoever owns the tender.",
+    "type": "liberu-module",
+    "license": "MIT",
+    "version": "0.1.0",
+    "require": {
+        "php": "^8.5",
+        "laravel/framework": "^13.0",
+        "liberusoftware/module-manager": "^1.4"
+    },
+    "require-dev": {
+        "liberusoftware/package-testbench": "^1.7",
+        "pestphp/pest": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Liberu\\Ecommerce\\Returns\\": "src/",
+            "Liberu\\Ecommerce\\Returns\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Liberu\\Ecommerce\\Returns\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "liberu": {
+            "name": "ecommerce-returns"
+        }
+    },
+    "scripts": {
+        "test": "pest"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
